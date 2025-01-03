@@ -1,6 +1,6 @@
 # Evaluación Frontend
 
-Proyecto en angular v18.0.0 con principios solidos con arquitectura clean arquitecture y con UI ngprime
+Proyecto en angular v18.0.0 con UI ngprime y aplicando buenas practicas de desarrollo como son principios solidos y clean arquitecture
 
 ## Instala dependencias
 
@@ -13,5 +13,3 @@ Ejecuta `ng serve` ng serve para iniciar un servidor de desarrollo. Navega a htt
 ## Repositorio GitHub
 
 https://github.com/ingcharles/evaluacion-frontend.git
-
-
