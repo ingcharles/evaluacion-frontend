@@ -1,12 +1,26 @@
-<div>aaa</div>
-
-<div class="p-fluid grid">
-
-  <div class="col-12 md:col-6">
-    <label for="estado"> Menu padre (*)</label>
-    <p-select id="idMenuPadre" name="idMenuPadre" class="w-full"
-       placeholder="Seleccione" [options]="optionsMenuPadre"
-      optionValue="idMenu" optionLabel="nombre"
-     />
+<p-fieldset legend="Datos de localización - Registro Social ">
+  <div class="p-fluid grid">
+    <div class="col-12 md:col-4">
+      <label for="provincia"> Provincia</label>
+      <p-dropdown id="provincia" name="provincia" class="w-full" optionValue="id" optionLabel="nombre"
+        placeholder="Seleccione..." [options]="optionsProvincia" (onChange)="onChangeProvincia($event)" />
+    </div>
+    <div class="col-12 md:col-4">
+      <label for="canton"> Cantón</label>
+      <p-dropdown id="canton" name="canton" class="w-full" optionValue="id" optionLabel="nombre"
+        placeholder="Seleccione..." [options]="optionsCanton" (onChange)="onChangeCanton($event)" />
+    </div>
+    <div class="col-12 md:col-4">
+      <label for="estado"> Parroquia</label>
+      <p-dropdown id="parroquia" name="parroquia" class="w-full" optionValue="id" optionLabel="nombre"
+        placeholder="Seleccione..." [options]="optionsParroquia" (onChange)="onChangeParroquia($event)"/>
+    </div>
+    <div class="col-12 md:col-5"></div>
+    <div class="col-12 md:col-4">
+      <p><label class="font-bold">Provincia: </label><span *ngIf="selectedProvincia">{{selectedProvincia.id}} - {{selectedProvincia.nombre}}</span></p>
+      <p><label class="font-bold">Cantón: </label><span *ngIf="selectedCanton">{{selectedCanton.id}} - {{selectedCanton.nombre}}</span></p>
+      <p><label class="font-bold">Parroquia: </label><span *ngIf="selectedParroquia">{{selectedParroquia.id}} - {{selectedParroquia.nombre}}</span></p>
+    </div>
+    <div class="col-12 md:col-4"></div>
   </div>
-</div>
+</p-fieldset>
